@@ -99,7 +99,6 @@ public class ExhibitorCLI
     public static final String ACL_PERMISSIONS = "aclperms";
     public static final String SERVO_INTEGRATION = "servo";
 
-    public static final String DEFAULT_S3_ENDPOINT = "https://s3.amazonaws.com";
     public static final String DEFAULT_FILESYSTEMCONFIG_NAME = "exhibitor.properties";
     public static final String DEFAULT_PREFIX = "exhibitor-";
     public static final String DEFAULT_FILESYSTEMCONFIG_LOCK_PREFIX = "exhibitor-lock-";
@@ -126,7 +125,7 @@ public class ExhibitorCLI
         Options s3ConfigOptions = new Options();
         s3ConfigOptions.addOption(null, S3_CONFIG, true, "The bucket name and key to store the config (s3credentials may be provided as well). Argument is [bucket name]:[key].");
         s3ConfigOptions.addOption(null, S3_CONFIG_PREFIX, true, "When using AWS S3 shared config files, the prefix to use for values such as locks. Default is " + DEFAULT_PREFIX);
-        s3ConfigOptions.addOption(null, S3_ENDPOINT, true, "Override if using an endpoint other than US Standard. Default is " + DEFAULT_S3_ENDPOINT);
+        s3ConfigOptions.addOption(null, S3_ENDPOINT, true, "Override if using an endpoint other than US Standard.");
 
         Options zookeeperConfigOptions = new Options();
         zookeeperConfigOptions.addOption(null, ZOOKEEPER_CONFIG_INITIAL_CONNECT_STRING, true, "The initial connection string for ZooKeeper shared config storage. E.g: \"host1:2181,host2:2181...\"");
